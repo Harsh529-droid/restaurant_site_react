@@ -8,7 +8,7 @@ const Restaurant = () => {
 
   return (
     <>
-      <MenuCard menuData={menuData} />
+      <MenuCard foodItems={menuData} />
     </>
   );
 }

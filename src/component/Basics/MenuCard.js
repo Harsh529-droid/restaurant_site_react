@@ -2,14 +2,16 @@ import React from 'react';
 import './styles.css';
 
 
-const MenuCard = ({menuData}) => {
+const MenuCard = ({foodItems}) => {
   
   return(  
     <>
     
-        <section className='main-card--container'>
+    
+    
+        <section className='main-card--cointainer'>
             
-            { menuData.map((curr) => {
+            { foodItems.map((curr) => {
               
               return(
                  <>
