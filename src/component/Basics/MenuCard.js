@@ -1,42 +1,51 @@
 import React from 'react';
+import './styles.css';
 
-const MenuCard = ({menuData}) => {
-  
-  return(  
+
+const MenuCard = ({ foodItems }) => {
+
+  return (
     <>
-        <div className='main-card--container'>
-            
-            { menuData.map((curr) => {
-              
-              return(
-                 <>
-                      <div className='card-container'>
-                      <div className='card'>
-                         <div className='card-body'>
-                              <span className='card-number card-circle subtle'>1</span>
-                              
-                              <span className='card-author subtle'>Breakfast</span>
-          
-                              <h2 className='card-title'>Maggi</h2>
-                              
-                              <span className='class-description subtle'>
-                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                              Temporibus laborum culpa sapiente maxime, inventore iste.
-                              </span>
-          
-                              <div className='card-read'>Read</div>
-                         </div>     
-                              {/* <img src='' alt='' className='card-media' /> */}
-                              <span className='card-tag subtle'>Order Now</span>
-                      </div>
-                      </div>
-                 </>
-              ); 
-            })}  
 
-        </div>
+
+
+      <section className='main-card--cointainer'>
+
+        {foodItems.map((curr) => {
+
+          const { id, category, name, description, image } = curr; //Destructuring
+
+          return (
+            <>
+              <div className='card-container' key={id}>
+                <div className='card'>
+                  <div className='card-body'>
+                    <span className='card-number card-circle subtle'>{id}</span>
+
+                    <span className='card-author subtle'>{category}</span>
+
+                    <h2 className='card-title'>{name}</h2>
+
+                    <span className='class-description subtle'>
+                      {description}
+                    </span>
+
+                    <div className='card-read'>Read</div>
+                  </div>
+                  <img src={image} alt='' className='card-media' />
+                  <span className='card-tag subtle'>Order Now</span>
+                </div>
+              </div>
+            </>
+          );
+
+        })}
+
+      </section>
+
     </>
-  ); 
+  );
+
 }
 
 export default MenuCard;
