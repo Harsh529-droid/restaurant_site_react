@@ -3,7 +3,7 @@ import './styles.css';
 import Menu from './menuApi';
 import MenuCard from './MenuCard.js';
 
-const App = () => {
+const Restaurant = () => {
  const [menuData, setMenuData] = useState(Menu); //hook
 
   return (
@@ -13,5 +13,5 @@ const App = () => {
   );
 }
 
-export default App
+export default Restaurant;
 
