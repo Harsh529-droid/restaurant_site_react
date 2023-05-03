@@ -8,7 +8,9 @@ const UseEffect = () => {
 
     useEffect(() => {
       document.title = `Chats(${myNum})`;  // ` ` above tab key  vs ' ' near semicolon key
-    });
+    }/**/ ); 
+       //if you want this to get triggered once
+       // add < , [] > in above /* */ place
 
   return (
     <>
